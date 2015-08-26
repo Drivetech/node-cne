@@ -1,0 +1,36 @@
+{
+  "name": "node-cne",
+  "version": "0.0.1",
+  "description": "Get fuel price from cne api",
+  "main": "lib",
+  "scripts": {
+    "babel": "babel src --out-dir lib --source-maps",
+    "eslint": "eslint src",
+    "clean": "rimraf lib",
+    "build": "npm run clean && npm run eslint && npm run babel",
+    "test": "mocha --compilers js:babel/register src/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgaticaq/node-cne.git"
+  },
+  "keywords": [
+    "cne",
+    "fuel",
+    "api"
+  ],
+  "author": "Leonardo Gatica <lgatica@protonmail.com> (https://about.me/lgatica)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lgaticaq/node-cne/issues"
+  },
+  "homepage": "https://github.com/lgaticaq/node-cne#readme",
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "chai": "^3.2.0",
+    "chai-as-promised": "^5.1.0",
+    "eslint": "^1.2.1",
+    "mocha": "^2.2.5",
+    "rimraf": "^2.4.2"
+  }
+}
