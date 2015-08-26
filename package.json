@@ -1,6 +1,6 @@
 {
   "name": "cne",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Get fuel price from cne api",
   "main": "lib",
   "scripts": {
@@ -31,6 +31,11 @@
     "chai-as-promised": "^5.1.0",
     "eslint": "^1.2.1",
     "mocha": "^2.2.5",
-    "rimraf": "^2.4.2"
-  }
+    "rimraf": "^2.4.2",
+    "yargs": "^3.21.0"
+  },
+  "bin": {
+    "cne": "lib/cne.js"
+  },
+  "preferGlobal": true
 }
