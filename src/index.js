@@ -31,7 +31,7 @@ export default function cne(options={}) {
           if (res.estado !== "OK") resolve([])
 
           let data = res.data
-          let result = null
+          let result = {}
 
           if (commune) {
             data = data.filter(x => x.nombre_comuna === commune)
