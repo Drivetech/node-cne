@@ -1,6 +1,7 @@
 "use strict"
 
 import http from "http"
+import FUEL_TYPES from "./fuel-types"
 
 export default function cne(options={}) {
   const commune = options.commune || null
@@ -10,16 +11,6 @@ export default function cne(options={}) {
 
   return new Promise(
     function (resolve, reject) {
-      const FUEL_TYPES = [
-        "gasolina_93",
-        "gasolina_95",
-        "gasolina_97",
-        "glp_vehicular",
-        "gnc",
-        "kerosene",
-        "petroleo_diesel"
-      ]
-
       http.get(`http://api.cne.cl/api/listaInformacion/${token}`, (response) => {
         let body = ""
 
