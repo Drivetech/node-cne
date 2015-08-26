@@ -20,7 +20,7 @@ $ npm install -g cne
 $ cne -h
 Get lower fuel price from cne api
 
-Usage: src/cne.js
+Usage: cne
 
 Opciones:
   -f, --fuel-type             Choose a fuel type
@@ -34,10 +34,9 @@ Opciones:
   --help, -h                  Muestra ayuda                            [boolean]
 
 Ejemplos:
-  src/cne.js -f gasolina_95 -c Santiago     Get lower price of gasoline 95 in
-                                            Santiago
-  src/cne.js -f gasolina_95 -c Santiago -d  Get lower price of gasoline 95 of
-  COPEC                                     COPEC in Santiago
+  cne -f gasolina_95 -c Santiago
+  cne -f gasolina_95 -c Santiago --ldt
+  COPEC
 ```
 
 ## Use
