@@ -1,11 +1,11 @@
 cne
 ===
 
-[![Join the chat at https://gitter.im/lgaticaq/node-cne](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/lgaticaq/node-cne?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![npm version](https://badge.fury.io/js/node-cne.svg)](http://badge.fury.io/js/node-cne)
-[![Build Status](https://travis-ci.org/lgaticaq/node-cne.svg)](https://travis-ci.org/lgaticaq/node-cne)
-[![devDependency Status](https://david-dm.org/lgaticaq/node-cne/dev-status.svg)](https://david-dm.org/lgaticaq/node-cne#info=devDependencies)
-[![Downloads](http://img.shields.io/npm/dm/node-cne.svg)](https://npmjs.org/package/node-cne)
+[![npm version](https://img.shields.io/npm/v/node-cne.svg?style=flat-square)](https://www.npmjs.com/package/node-cne)
+[![npm downloads](https://img.shields.io/npm/dm/node-cne.svg?style=flat-square)](https://www.npmjs.com/package/node-cne)
+[![Build Status](https://img.shields.io/travis/lgaticaq/node-cne.svg?style=flat-square)](https://travis-ci.org/lgaticaq/node-cne)
+[![devDependency Status](https://img.shields.io/david/dev/lgaticaq/node-cne.svg?style=flat-square)](https://david-dm.org/lgaticaq/node-cne#info=devDependencies)
+[![Join the chat at https://gitter.im/lgaticaq/node-cne](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/lgaticaq/node-cne?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Get lower fuel price from cne api
 
