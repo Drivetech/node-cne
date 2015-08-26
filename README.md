@@ -35,8 +35,7 @@ Opciones:
 
 Ejemplos:
   cne -f gasolina_95 -c Santiago
-  cne -f gasolina_95 -c Santiago --ldt
-  COPEC
+  cne -f gasolina_95 -c Santiago --dt COPEC
 ```
 
 ## Use
