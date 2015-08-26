@@ -1,5 +1,7 @@
 # cne
 
+[![Join the chat at https://gitter.im/lgaticaq/node-cne](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/lgaticaq/node-cne?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![npm version](https://img.shields.io/npm/v/cne.svg?style=flat-square)](https://www.npmjs.com/package/cne)
 [![npm downloads](https://img.shields.io/npm/dm/cne.svg?style=flat-square)](https://www.npmjs.com/package/cne)
 [![Build Status](https://img.shields.io/travis/lgaticaq/node-cne.svg?style=flat-square)](https://travis-ci.org/lgaticaq/node-cne)
