@@ -1,6 +1,6 @@
 {
   "name": "cne",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Get fuel price from cne api",
   "main": "lib",
   "scripts": {
