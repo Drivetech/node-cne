@@ -30,8 +30,7 @@ export default function cne(options={}) {
           if (distributor) {
             data = data.filter(x => x.nombre_distribuidor === distributor)
           }
-
-          if (FUEL_TYPES.includes(fuelType)) {
+          if (FUEL_TYPES.indexOf(fuelType) > -1) {
             data = data.filter(x => x.precio_por_combustible[fuelType])
             result = data.reduce((x, y) => {
               Math.min(x.precio_por_combustible[fuelType], y.precio_por_combustible[fuelType])

@@ -1,6 +1,6 @@
 {
   "name": "cne",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Get fuel price from cne api",
   "main": "lib",
   "scripts": {
@@ -8,7 +8,7 @@
     "eslint": "eslint src",
     "clean": "rimraf lib",
     "build": "npm run clean && npm run eslint && npm run babel",
-    "publish": "npm run build && npm publish",
+    "upload": "npm run build && npm publish",
     "test": "mocha --compilers js:babel/register src/test"
   },
   "repository": {
