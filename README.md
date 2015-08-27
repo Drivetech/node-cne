@@ -49,7 +49,7 @@ const options = {
   distributor: "COPEC" // optional
 }
 
-cne(options)
+cne.get(options)
   .then((data) => {
     console.log(data)
     // Show in console

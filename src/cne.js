@@ -3,9 +3,6 @@
 import cne from "./"
 import pkg from "../package"
 import yargs from "yargs"
-import communes from "./communes"
-import distributors from "./distributors"
-import fuelTypes from "./fuel-types"
 
 const args = yargs
   .usage("Get lower fuel price from cne api\n\nUsage: cne")
@@ -29,13 +26,13 @@ const options = {
 }
 
 if (args.argv.lf) {
-  console.log(fuelTypes.join(", "))
+  console.log(cne.fuelTypes.join(", "))
 } else if (args.argv.lc) {
-  console.log(communes.join(", "))
+  console.log(cne.communes.join(", "))
 } else if (args.argv.ldt) {
-  console.log(distributors.join(", "))
+  console.log(cne.distributors.join(", "))
 } else {
-  cne(options)
+  cne.get(options)
     .then((data) => {
       console.log(data)
     })

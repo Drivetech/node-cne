@@ -1,9 +1,11 @@
 "use strict"
 
 import http from "http"
-import FUEL_TYPES from "./fuel-types"
+import fuelTypes from "./fuel-types"
+import communes from "./communes"
+import distributors from "./distributors"
 
-export default function cne(options={}) {
+function get(options={}) {
   const commune = options.commune || null
   const distributor = options.distributor || null
   const fuelType = options.fuelType || null
@@ -30,12 +32,14 @@ export default function cne(options={}) {
           if (distributor) {
             data = data.filter(x => x.nombre_distribuidor === distributor)
           }
-          if (FUEL_TYPES.indexOf(fuelType) > -1) {
+          if (fuelTypes.indexOf(fuelType) > -1) {
             data = data.filter(x => x.precio_por_combustible[fuelType])
-            result = data.reduce((x, y) => {
-              Math.min(x.precio_por_combustible[fuelType], y.precio_por_combustible[fuelType])
-              return y
-            })
+            if (data.length) {
+              result = data.reduce((x, y) => {
+                Math.min(x.precio_por_combustible[fuelType], y.precio_por_combustible[fuelType])
+                return y
+              })
+            }
           }
 
           resolve(result)
@@ -43,4 +47,11 @@ export default function cne(options={}) {
       }).on("error", (err) => reject(err))
     }
   )
+}
+
+export default {
+  get: get,
+  fuelTypes: fuelTypes,
+  communes: communes,
+  distributors: distributors
 }

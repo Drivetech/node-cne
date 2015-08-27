@@ -1,10 +1,10 @@
 {
   "name": "cne",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Get fuel price from cne api",
   "main": "lib",
   "scripts": {
-    "babel": "babel src --out-dir lib --source-maps",
+    "babel": "babel src --out-dir lib",
     "eslint": "eslint src",
     "clean": "rimraf lib",
     "build": "npm run clean && npm run eslint && npm run babel",
