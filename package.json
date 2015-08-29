@@ -1,6 +1,6 @@
 {
   "name": "cne",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Get fuel price from cne api",
   "main": "lib",
   "scripts": {
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/lgaticaq/node-cne#readme",
   "dependencies": {
+    "q": "^1.4.1",
     "yargs": "^3.21.0"
   },
   "devDependencies": {

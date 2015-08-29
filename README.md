@@ -49,6 +49,7 @@ const options = {
   distributor: "COPEC" // optional
 }
 
+// Promise
 cne.get(options)
   .then((data) => {
     console.log(data)
@@ -77,6 +78,35 @@ cne.get(options)
     // }
   })
   .catch((err) => console.error(err))
+
+// Callback
+cne.get(options, (err, data) => {
+  if (err) console.error(err)
+  console.log(data)
+  // Show in console
+  // {
+  //   id: 'ul1510101',
+  //   fecha: '2015-07-24 20:29:23',
+  //   direccion_calle: 'Barros Arana',
+  //   direccion_numero: '3081',
+  //   latitud: -18.458676528284,
+  //   longitud: -70.288939476013,
+  //   nombre_comuna: 'Arica',
+  //   nombre_distribuidor: 'Uligas',
+  //   tienda_conveniencia: '',
+  //   farmacia: '',
+  //   bano_publico: '1',
+  //   servicios_mantencion: '',
+  //   autoservicio: '',
+  //   horario_atencion: 'HH',
+  //   precio_por_combustible: {
+  //     glp_vehicular: 393
+  //   },
+  //   metodos_de_pago: {
+  //     efectivo: '1'
+  //   }
+  // }
+})
 ```
 
 ## Fuel types availables
