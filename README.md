@@ -77,7 +77,7 @@ cne.get(options)
     //   }
     // }
   })
-  .catch((err) => console.error(err))
+  .fail((err) => console.error(err))
 
 // Callback
 cne.get(options, (err, data) => {

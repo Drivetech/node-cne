@@ -27,10 +27,10 @@ function get(options={}, callback) {
       let result = {}
 
       if (commune) {
-        data = data.filter(x => x.nombre_comuna === commune)
+        data = data.filter(x => x.nombre_comuna.toLowerCase() === commune)
       }
       if (dist) {
-        data = data.filter(x => x.nombre_distribuidor === dist)
+        data = data.filter(x => x.nombre_distribuidor.toLowerCase() === dist)
       }
       if (fuelTypes.indexOf(fuelType) > -1) {
         data = data.filter(x => x.precio_por_combustible[fuelType])
