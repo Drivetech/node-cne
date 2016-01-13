@@ -3,6 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/cne.svg?style=flat-square)](https://www.npmjs.com/package/cne)
 [![npm downloads](https://img.shields.io/npm/dm/cne.svg?style=flat-square)](https://www.npmjs.com/package/cne)
 [![Build Status](https://img.shields.io/travis/lgaticaq/node-cne.svg?style=flat-square)](https://travis-ci.org/lgaticaq/node-cne)
+[![dependency Status](https://img.shields.io/david/lgaticaq/node-cne.svg?style=flat-square)](https://david-dm.org/lgaticaq/node-cne#info=dependencies)
 [![devDependency Status](https://img.shields.io/david/dev/lgaticaq/node-cne.svg?style=flat-square)](https://david-dm.org/lgaticaq/node-cne#info=devDependencies)
 [![Join the chat at https://gitter.im/lgaticaq/node-cne](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/lgaticaq/node-cne?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -11,48 +12,25 @@ Get lower fuel price from cne api
 ## Installation
 
 ```bash
-$ npm install -g cne
-```
-
-## CLI
-
-```bash
-$ cne -h
-Get lower fuel price from cne api
-
-Usage: cne
-
-Opciones:
-  -f, --fuel-type             Choose a fuel type
-                                            [requisito] [defecto: "gasolina_95"]
-  -c, --commune               Choose a commune
-  --dt, --distributor         Choose a distributor
-  --lf, --list-fuel-types     List all fuel types                      [boolean]
-  --lc, --list-communes       List all communes                        [boolean]
-  --ldt, --list-distributors  List all distributors                    [boolean]
-  --version, -V               Muestra número de versión                [boolean]
-  --help, -h                  Muestra ayuda                            [boolean]
-
-Ejemplos:
-  cne -f gasolina_95 -c Santiago
-  cne -f gasolina_95 -c Santiago --dt COPEC
+$ npm i cne
 ```
 
 ## Use
 
-```node
-import cne from "cne"
+[Try on Tonic](https://tonicdev.com/npm/cne)
+```js
+import cne from 'cne';
 
 const options = {
-  fuelType: "gasolina_95", // required
-  commune: "Santiago", // optional
-  distributor: "COPEC" // optional
-}
+  fuelType: 'gasolina_95', // required
+  commune: 'Santiago', // optional
+  distributor: 'COPEC' // optional
+};
 
 // Promise
 cne.get(options)
   .then((data) => {
-    console.log(data)
+    console.log(data);
     // Show in console
     // {
     //   id: 'ul1510101',
@@ -77,12 +55,12 @@ cne.get(options)
     //   }
     // }
   })
-  .fail((err) => console.error(err))
+  .catch((err) => console.error(err));
 
 // Callback
 cne.get(options, (err, data) => {
-  if (err) console.error(err)
-  console.log(data)
+  if (err) console.error(err);
+  console.log(data);
   // Show in console
   // {
   //   id: 'ul1510101',
@@ -106,7 +84,7 @@ cne.get(options, (err, data) => {
   //     efectivo: '1'
   //   }
   // }
-})
+});
 ```
 
 ## Fuel types availables
