@@ -1,6 +1,6 @@
 "use strict"
 
-import cne from "../"
+import cne from "../lib"
 import assert from "assert"
 
 describe("Cne", () => {

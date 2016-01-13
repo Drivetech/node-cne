@@ -9,7 +9,7 @@
     "clean": "rimraf lib",
     "build": "npm run clean && npm run eslint && npm run babel",
     "upload": "npm run build && npm publish",
-    "test": "mocha --compilers js:babel/register src/test"
+    "test": "mocha --compilers js:babel/register"
   },
   "repository": {
     "type": "git",
