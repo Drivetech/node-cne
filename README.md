@@ -3,6 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/cne.svg?style=flat-square)](https://www.npmjs.com/package/cne)
 [![npm downloads](https://img.shields.io/npm/dm/cne.svg?style=flat-square)](https://www.npmjs.com/package/cne)
 [![Build Status](https://img.shields.io/travis/lgaticaq/node-cne.svg?style=flat-square)](https://travis-ci.org/lgaticaq/node-cne)
+[![Coverage Status](https://img.shields.io/coveralls/lgaticaq/node-cne/master.svg?style=flat-square)](https://coveralls.io/github/lgaticaq/node-cne?branch=master)
 [![dependency Status](https://img.shields.io/david/lgaticaq/node-cne.svg?style=flat-square)](https://david-dm.org/lgaticaq/node-cne#info=dependencies)
 [![devDependency Status](https://img.shields.io/david/dev/lgaticaq/node-cne.svg?style=flat-square)](https://david-dm.org/lgaticaq/node-cne#info=devDependencies)
 [![Join the chat at https://gitter.im/lgaticaq/node-cne](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/lgaticaq/node-cne?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -27,64 +28,30 @@ const options = {
   distributor: 'COPEC' // optional
 };
 
-// Promise
-cne.get(options)
-  .then((data) => {
-    console.log(data);
-    // Show in console
-    // {
-    //   id: 'ul1510101',
-    //   fecha: '2015-07-24 20:29:23',
-    //   direccion_calle: 'Barros Arana',
-    //   direccion_numero: '3081',
-    //   latitud: -18.458676528284,
-    //   longitud: -70.288939476013,
-    //   nombre_comuna: 'Arica',
-    //   nombre_distribuidor: 'Uligas',
-    //   tienda_conveniencia: '',
-    //   farmacia: '',
-    //   bano_publico: '1',
-    //   servicios_mantencion: '',
-    //   autoservicio: '',
-    //   horario_atencion: 'HH',
-    //   precio_por_combustible: {
-    //     glp_vehicular: 393
-    //   },
-    //   metodos_de_pago: {
-    //     efectivo: '1'
-    //   }
-    // }
-  })
-  .catch((err) => console.error(err));
-
-// Callback
-cne.get(options, (err, data) => {
-  if (err) console.error(err);
-  console.log(data);
-  // Show in console
-  // {
-  //   id: 'ul1510101',
-  //   fecha: '2015-07-24 20:29:23',
-  //   direccion_calle: 'Barros Arana',
-  //   direccion_numero: '3081',
-  //   latitud: -18.458676528284,
-  //   longitud: -70.288939476013,
-  //   nombre_comuna: 'Arica',
-  //   nombre_distribuidor: 'Uligas',
-  //   tienda_conveniencia: '',
-  //   farmacia: '',
-  //   bano_publico: '1',
-  //   servicios_mantencion: '',
-  //   autoservicio: '',
-  //   horario_atencion: 'HH',
-  //   precio_por_combustible: {
-  //     glp_vehicular: 393
-  //   },
-  //   metodos_de_pago: {
-  //     efectivo: '1'
-  //   }
-  // }
-});
+cne.get(options).then(console.log);
+// Show in console
+// {
+//   id: 'ul1510101',
+//   fecha: '2015-07-24 20:29:23',
+//   direccion_calle: 'Barros Arana',
+//   direccion_numero: '3081',
+//   latitud: -18.458676528284,
+//   longitud: -70.288939476013,
+//   nombre_comuna: 'Arica',
+//   nombre_distribuidor: 'Uligas',
+//   tienda_conveniencia: '',
+//   farmacia: '',
+//   bano_publico: '1',
+//   servicios_mantencion: '',
+//   autoservicio: '',
+//   horario_atencion: 'HH',
+//   precio_por_combustible: {
+//     glp_vehicular: 393
+//   },
+//   metodos_de_pago: {
+//     efectivo: '1'
+//   }
+// }
 ```
 
 ## Fuel types availables

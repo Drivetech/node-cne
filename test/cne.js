@@ -1,21 +1,18 @@
 'use strict';
 
-import {expect} from 'chai';
-import nock from 'nock';
+const expect = require('chai').expect;
+const nock = require('nock');
 
-import lib from '../lib';
-import pkg from '../package.json';
+const lib = require('../src');
+const pkg = require('../package.json');
 
 describe('cne', () => {
-
-
   describe('valid', () => {
-
     const options = {
       fuelType: 'gasolina_95',
       commune: 'Santiago',
       distributor: 'COPEC'
-    }
+    };
 
     beforeEach(() => {
       nock.disableNetConnect();
@@ -45,13 +42,12 @@ describe('cne', () => {
             }
           }],
           estado: 'OK',
-          'ult. actualizacion': '13-01-2016',
+          'ult. actualizacion': '13-01-2016'
         });
     });
 
-    it('should return a balance data (callback)', (done) => {
-      lib.get(options, (err, data) => {
-        expect(err).to.be.null;
+    it('should return a balance data', done => {
+      lib.get(options).then(data => {
         expect(data).to.be.a('object');
         expect(data).to.contain.any.keys([
           'id',
@@ -72,33 +68,7 @@ describe('cne', () => {
           'metodos_de_pago'
         ]);
         done();
-      });
-    });
-
-
-    it('should return a balance data (promise)', (done) => {
-      lib.get(options).then((data) => {
-        expect(data).to.be.a('object');
-        expect(data).to.contain.any.keys([
-          'id',
-          'fecha',
-          'direccion_calle',
-          'direccion_numero',
-          'latitud',
-          'longitud',
-          'nombre_comuna',
-          'nombre_distribuidor',
-          'tienda_conveniencia',
-          'farmacia',
-          'bano_publico',
-          'servicios_mantencion',
-          'autoservicio',
-          'horario_atencion',
-          'precio_por_combustible',
-          'metodos_de_pago'
-        ]);
-        done();
-      }).fail((err) => {
+      }).catch(err => {
         expect(err).to.be.null;
         done();
       });
@@ -111,7 +81,7 @@ describe('cne', () => {
       fuelType: 'gasolina_95',
       commune: 'Santiago',
       distributor: 'COPEC'
-    }
+    };
 
     beforeEach(() => {
       nock.disableNetConnect();
@@ -120,19 +90,11 @@ describe('cne', () => {
         .reply(200, {estado: 'error'});
     });
 
-    it('should return a empty data (callback)', (done) => {
-      lib.get(options, (err, data) => {
-        expect(err).to.be.null;
+    it('should return a empty data', done => {
+      lib.get(options).then(data => {
         expect(data).to.be.empty;
         done();
-      });
-    });
-
-    it('should return a empty data (promise)', (done) => {
-      lib.get(options).then((data) => {
-        expect(data).to.be.empty;
-        done();
-      }).fail((err) => {
+      }).catch(err => {
         expect(err).to.be.null;
         done();
       });
