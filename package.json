@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/lgaticaq/node-cne#readme",
   "dependencies": {
-    "request-promise": "^3.0.0"
+    "request-promise": "^4.0.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
