@@ -4,11 +4,10 @@
 [![npm downloads](https://img.shields.io/npm/dm/cne.svg?style=flat-square)](https://www.npmjs.com/package/cne)
 [![Build Status](https://img.shields.io/travis/lgaticaq/node-cne.svg?style=flat-square)](https://travis-ci.org/lgaticaq/node-cne)
 [![Coverage Status](https://img.shields.io/coveralls/lgaticaq/node-cne/master.svg?style=flat-square)](https://coveralls.io/github/lgaticaq/node-cne?branch=master)
-[![dependency Status](https://img.shields.io/david/lgaticaq/node-cne.svg?style=flat-square)](https://david-dm.org/lgaticaq/node-cne#info=dependencies)
+[![Code Climate](https://img.shields.io/codeclimate/github/lgaticaq/node-cne.svg?style=flat-square)](https://codeclimate.com/github/lgaticaq/node-cne)
 [![devDependency Status](https://img.shields.io/david/dev/lgaticaq/node-cne.svg?style=flat-square)](https://david-dm.org/lgaticaq/node-cne#info=devDependencies)
-[![Join the chat at https://gitter.im/lgaticaq/node-cne](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/lgaticaq/node-cne?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Get lower fuel price from cne api
+> Get lower fuel price from cne api
 
 ## Installation
 
@@ -71,3 +70,7 @@ Aisén, Algarrobo, Alhué, Alto Hospicio, Ancud, Andacollo, Angol, Antofagasta, 
 ```
 ABASTIBLE, APEX, ATT, AUTOGASCO, BALTOLU, CAVE, CHILIN, COC, COMBUSTIBLES AMADE, COMBUSTIBLES JCD, COMERCIAL MAQUI, COPEC, CUSTOM SERVICE, Combustible Alhue, Combustibles Endless.com, Combustibles Ortiz, Coopeserau, Cremaschi, DELPA, ECCO, ECOGREEN LTDA., EL HUIQUE, ENERSUR S.A., FACAZ, HN, HOLA!, J Allel, JLC, LIDER S.A., LIPIGAS, PETROBRAS, PETROJAC, PETRONEXT, Puma Verde, Rafael Letelier Yañez y Cia Ltda, SERVICENTRO LEAL, SERVICENTRO SAN MIGUEL, SERVICENTROS RABALME, SESA, SHELL, SINHEL, SOCORRO, SUAREZ COMBUSTIBLES, SURENERGY, Sin Bandera, TERPEL, Uligas, VIVA COMBUSTIBLES
 ```
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license)
