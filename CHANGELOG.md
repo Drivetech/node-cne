@@ -1,3 +1,27 @@
+#### 1.0.1 (2016-12-7)
+
+##### Chores
+
+* **npm:**
+  * Update ignores ([f1b37298](https://github.com/lgaticaq/node-cne/commit/f1b3729854f05e34dbba42f91be3d1ae0d3a1871))
+  * Add .eslintignore ([12aff406](https://github.com/lgaticaq/node-cne/commit/12aff406dbbff61653969b385f8fd8c7e7ed7cbb))
+* **travis:** Update node version ([6708d705](https://github.com/lgaticaq/node-cne/commit/6708d7053f3a40ef5fe86b7795ccba5d1787d4dc))
+* **package:**
+  * Add yarn.lock ([59fa2912](https://github.com/lgaticaq/node-cne/commit/59fa29120cdca2734bf945aaa9cc0ce5c9ce389f))
+  * Update dependencies ([f563f7c7](https://github.com/lgaticaq/node-cne/commit/f563f7c744f2b6c95885c03dc0e50d1bfd986e86))
+  * update mocha to version 3.0.0 ([07bfdee1](https://github.com/lgaticaq/node-cne/commit/07bfdee1e195db113a5d84445357b8b3aeb3d2ee))
+  * update request-promise to version 4.0.2 ([5602b34e](https://github.com/lgaticaq/node-cne/commit/5602b34eaa252498e9951c8e61fc774f389dc543))
+  * update eslint to version 3.0.0 ([e843be14](https://github.com/lgaticaq/node-cne/commit/e843be14fdfbc69c14d85323c9c47a3b2a5017e6))
+  * update mocha to version 2.5.0 ([1429d724](https://github.com/lgaticaq/node-cne/commit/1429d72466c4f2fc6f53465f91ff8a109e99021b))
+* **tests:** Complete tests ([99ba1c5d](https://github.com/lgaticaq/node-cne/commit/99ba1c5d2b3108319a01357c500041f76cac8665))
+* **http:** Replace request-promise for http ([50917172](https://github.com/lgaticaq/node-cne/commit/509171721b50348c7a09aefc287eef1342744fb4))
+* **nvm:** Update node version ([1c41b620](https://github.com/lgaticaq/node-cne/commit/1c41b620b9b4cdbe3182bb8a7999c0567c8dad65))
+
+##### Documentation Changes
+
+* **CHANGELOG:** Add CHANGELOG ([dfd946e8](https://github.com/lgaticaq/node-cne/commit/dfd946e8e7f3227f750a6506eae525b649926235))
+* **README:** Update badges ([2c568770](https://github.com/lgaticaq/node-cne/commit/2c5687707992497d41eb326bd1bec9f4ffa543b0))
+
 ## 1.0.0 (2016-05-14)
 
 * Refactor ([ba8892a](https://github.com/lgaticaq/node-cne/commit/ba8892a))
