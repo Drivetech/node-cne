@@ -1,10 +1,31 @@
 'use strict';
 
+const http = require('http');
 const fuelTypes = require('./fuel-types');
 const communes = require('./communes');
 const distributors = require('./distributors');
-const rp = require('request-promise');
 const pkg = require('../package.json');
+
+const request = url => {
+  return new Promise((resolve, reject) => {
+    http.get(url, res => {
+      if (res.statusCode !== 200) {
+        res.resume();
+        reject(new Error(`Request Failed. Status Code: ${res.statusCode}`));
+      }
+      res.setEncoding('utf8');
+      let rawData = '';
+      res.on('data', chunk => rawData += chunk);
+      res.on('end', () => {
+        try {
+          resolve(JSON.parse(rawData));
+        } catch (err) {
+          reject(err);
+        }
+      });
+    }).on('error', reject);
+  });
+};
 
 const get = options => {
   options = options || {};
@@ -12,13 +33,9 @@ const get = options => {
   const dist = options.distributor ? options.distributor.toLowerCase() : null;
   const fuelType = options.fuelType ? options.fuelType.toLowerCase() : null;
   const token = options.token || pkg.token;
+  const url = `http://api.cne.cl/api/listaInformacion/${token}`;
 
-  const rpOptions = {
-    url: `http://api.cne.cl/api/listaInformacion/${token}`,
-    json: true
-  };
-
-  return rp(rpOptions).then(res => {
+  return request(url).then(res => {
     if (res.estado !== 'OK') return {};
     let data = res.data;
     let result = {};
