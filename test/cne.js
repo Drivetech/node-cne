@@ -40,7 +40,30 @@ describe('cne', () => {
             metodos_de_pago: {
               efectivo: '1'
             }
-          }],
+          },
+          {
+            id: 'ul1510102',
+            fecha: '2015-07-24 20:29:23',
+            direccion_calle: 'Barros Arana',
+            direccion_numero: '3081',
+            latitud: -18.458676528284,
+            longitud: -70.288939476013,
+            nombre_comuna: 'Santiago',
+            nombre_distribuidor: 'COPEC',
+            tienda_conveniencia: '',
+            farmacia: '',
+            bano_publico: '1',
+            servicios_mantencion: '',
+            autoservicio: '',
+            horario_atencion: 'HH',
+            precio_por_combustible: {
+              gasolina_95: 650
+            },
+            metodos_de_pago: {
+              efectivo: '1'
+            }
+          }
+          ],
           estado: 'OK',
           'ult. actualizacion': '13-01-2016'
         });
@@ -73,6 +96,24 @@ describe('cne', () => {
         done();
       });
     });
+    it('should return a empty data', done => {
+      lib.get({fuelType: 'gasolina_97'}).then(data => {
+        expect(data).to.be.empty;
+        done();
+      }).catch(err => {
+        expect(err).to.be.null;
+        done();
+      });
+    });
+    it('should return a empty data', done => {
+      lib.get().then(data => {
+        expect(data).to.be.empty;
+        done();
+      }).catch(err => {
+        expect(err).to.be.null;
+        done();
+      });
+    });
   });
 
   describe('invalid', () => {
@@ -96,6 +137,22 @@ describe('cne', () => {
         done();
       }).catch(err => {
         expect(err).to.be.null;
+        done();
+      });
+    });
+  });
+
+  describe('error', () => {
+    beforeEach(() => {
+      nock.disableNetConnect();
+      nock('http://api.cne.cl')
+        .get(`/api/listaInformacion/${pkg.token}`)
+        .reply(301);
+    });
+
+    it('should return an error', done => {
+      lib.get().catch(err => {
+        expect(err).to.eql(new Error('Request Failed. Status Code: 301'));
         done();
       });
     });
