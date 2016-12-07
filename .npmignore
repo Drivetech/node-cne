@@ -1,5 +1,11 @@
+.git
+coverage
 node_modules
 test
-coverage
-.*
-LICENSE
+.editorconfig
+.eslintignore
+.gitignore
+.nvmrc
+.travis.yml
+CHANGELOG.md
+yarn.lock
