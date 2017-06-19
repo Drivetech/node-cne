@@ -1,3 +1,21 @@
+#### 1.0.2 (2017-6-19)
+
+##### Chores
+
+* **package:**
+  * update dependencies ([32cc0c14](https://github.com/lgaticaq/node-cne/commit/32cc0c147fd1fe96889639dd427917daba27c5eb))
+  * update chai to version 4.0.0 ([96b10254](https://github.com/lgaticaq/node-cne/commit/96b102543889db4ac11bb8ed96a0b437da6e8082))
+  * Upgrade codeclimate-test-reporter, coveralls, eslint and nock ([f8bdfb6e](https://github.com/lgaticaq/node-cne/commit/f8bdfb6e55f2c6c60be9c22f471f73737df2a205))
+  * update nock to version 9.0.9 ([8085c030](https://github.com/lgaticaq/node-cne/commit/8085c030ac58c54ff3e3b3b938bae609d8d10312))
+  * Update eslint to v3.14.1 ([713b84c8](https://github.com/lgaticaq/node-cne/commit/713b84c828be18ab6517733d447d0e80f9d3d639))
+  * Update dependencies ([a9d1a687](https://github.com/lgaticaq/node-cne/commit/a9d1a687e24a49337e60a091753c9141f6903ca8))
+  * update nock to version 9.0.2 ([f7b63d9c](https://github.com/lgaticaq/node-cne/commit/f7b63d9c719a91c01c88efbc575df6cf66857971))
+* **travis:** Add cache yarn ([d673447f](https://github.com/lgaticaq/node-cne/commit/d673447f74529d5dcf66a7a9aa3e0e208635747f))
+
+##### Documentation Changes
+
+* **LICENSE:** Update year ([4065461a](https://github.com/lgaticaq/node-cne/commit/4065461a009c4ec47b022acf7c49c37840487776))
+
 #### 1.0.1 (2016-12-7)
 
 ##### Chores
