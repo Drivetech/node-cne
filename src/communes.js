@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 module.exports = [
   'Aisén',
@@ -309,4 +309,4 @@ module.exports = [
   'Yumbel',
   'Yungay',
   'Zapallar'
-];
+]

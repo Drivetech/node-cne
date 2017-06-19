@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 module.exports = [
   'gasolina_93',
@@ -8,4 +8,4 @@ module.exports = [
   'gnc',
   'kerosene',
   'petroleo_diesel'
-];
+]
