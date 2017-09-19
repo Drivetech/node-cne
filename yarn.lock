@@ -1665,9 +1665,9 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
 
-nock@9.0.15:
-  version "9.0.15"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-9.0.15.tgz#4166f68f0f0c00d115af32c50a75390cb807a22f"
+nock@9.0.16:
+  version "9.0.16"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-9.0.16.tgz#b7875df2aa0e436a489f2d1b91ff69615b542f4b"
   dependencies:
     chai ">=1.9.2 <4.0.0"
     debug "^2.2.0"
