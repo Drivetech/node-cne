@@ -50,13 +50,8 @@
   },
   "eslintConfig": {
     "extends": "standard",
-    "parserOptions": {
-      "ecmaVersion": 2017
-    },
     "env": {
-      "node": true,
-      "mocha": true,
-      "es6": true
+      "mocha": true
     },
     "rules": {
       "no-console": [
@@ -64,6 +59,10 @@
       ]
     }
   },
+  "eslintIgnore": [
+    "coverage",
+    "example.js"
+  ],
   "lint-staged": {
     "src/**/*.js": [
       "eslint --fix",
@@ -77,5 +76,11 @@
     ]
   },
   "tonicExampleFilename": "example.js",
-  "token": "6M5jaVAzPS"
+  "token": "6M5jaVAzPS",
+  "renovate": {
+    "automerge": "minor",
+    "extends": [
+      ":library"
+    ]
+  }
 }
