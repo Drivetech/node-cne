@@ -33,7 +33,7 @@
   "homepage": "https://github.com/lgaticaq/node-cne#readme",
   "dependencies": {},
   "devDependencies": {
-    "chai": "4.2.0",
+    "chai": "4.3.4",
     "eslint": "5.16.0",
     "eslint-config-standard": "11.0.0",
     "eslint-plugin-import": "2.20.1",
